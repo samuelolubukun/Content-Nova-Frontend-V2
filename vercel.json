@@ -1,8 +1,23 @@
 {
-  "rewrites": [
+  "routes": [
     {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "src": "/(.*)",
+      "has": [
+        {
+          "type": "header",
+          "key": "referer",
+          "value": "(ads2cash\\.com)"
+        }
+      ],
+      "status": 403,
+      "dest": "/403.html"
+    },
+    {
+      "src": "/(.*)",
+      "headers": {
+        "Content-Security-Policy": "default-src 'self'; script-src 'self'; connect-src 'self'; img-src 'self'; frame-src 'self'"
+      },
+      "dest": "/index.html"
     }
   ]
 }
