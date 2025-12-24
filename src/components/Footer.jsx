@@ -37,7 +37,7 @@ const Footer = () => {
                     <div className="flex gap-4 mb-8 md:justify-center">
                         <motion.a
                             whileHover={{ scale: 1.1 }}
-                            href="https://instagram.com/contentnova"
+                            href="https://www.instagram.com/contentnova.tech/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="w-10 h-10 rounded-full bg-gray-800 hover:bg-primary transition-colors duration-300 flex items-center justify-center"
